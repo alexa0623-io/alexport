@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="h-full w-full">
+        <nav class="bg-white border-b border-gray-300 shadow-md w-full fixed top-0 z-50">
+            <div  class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/image/logo3.png" class="md:h-12 h-10">
+                </a>
+                <div class="flex">
+                    <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500 dark:text-gray-900" aria-controls="navbar-sticky" aria-expanded="false">
+                        <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:mt-0 mt-8" id="navbar-sticky">
+                    <ul class="flex flex-col md:p-0 font-medium text-sm rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 md:gap-0 gap-1">   
+                        <li>
+                            <a href="index.html" class="block py-2 md:px-5 px-4 text-zinc-600 hover:bg-gray-500 hover:text-white rounded" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="block py-2 md:px-5 px-4 rounded text-white bg-gray-500">About</a>
+                        </li>
+                        <li>
+                            <a href="service.html" class="block py-2 md:px-5 px-4 text-zinc-600 hover:bg-gray-500 hover:text-white rounded">Services</a>
+                        </li>
+
+                        <!-- dropdown -->
+                        <li class="relative" x-data="{ dropdownOpen: false }">
+                            <button href="#" class="flex justify-between items-center w-full px-4 py-2 font-medium text-zinc-600 hover:bg-gray-500 hover:text-white md:gap-3 rounded outline-none focus:outline-none"
+                                @click="dropdownOpen = !dropdownOpen"
+                                :class="{ 'bg-gray-500': dropdownOpen, 'text-white': dropdownOpen }">
+                                <p :class="{ 'text-white': dropdownOpen }">Project</p>
+                                <i class="fa-solid fa-angle-down" :class="{ 'text-white': dropdownOpen }"></i>
+                            </button>
+                            <!-- dropdown menu -->
+                            <div class="right-0 p-2 mt-1 md:mt-2 md:bg-white bg-zinc-100 md:text-gray-600 text-gray-800 rounded md:border-r md:border-b-2 md:border-t border shadow-sm md:shadow-md lg:absolute"
+                                :class="{ 'hidden': !dropdownOpen, 'flex flex-col': dropdownOpen }"
+                                @click.away="dropdownOpen = false">
+                                <ul class="space-y-1 lg:w-48">
+                                    <li>
+                                        <a href="src/figma.html" class="flex p-2 font-medium rounded-md hover:bg-gray-200 hover:text-zinc-700">Figma</a>
+                                    </li>
+                                    <li>
+                                        <a href="src/canva.html"class="flex p-2 font-medium rounded-md hover:bg-gray-200 hover:text-zinc-700">Canva</a>
+                                    </li>
+                                    <li>
+                                        <a href="src/wix.html" class="flex p-2 font-medium rounded-md  hover:bg-gray-200 hover:text-zinc-700">Wix</a>
+                                    </li>
+                                    <li>
+                                        <a href="src/website.html" class="flex p-2 font-medium rounded-md  hover:bg-gray-200 hover:text-zinc-700">Website</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    <li>
+                        <a href="contact.html" class="block py-2 md:px-5 px-4 rounded text-zinc-600 hover:bg-gray-500 hover:text-white">Contact</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="md:mt-24 mt-20 flex max-w-screen-xl mx-auto p-4">
+            <div class="flex flex-col align-middle justify-center">
+                <div id="carousel" class="relative" data-te-carousel-init data-te-ride="carousel">
+                    <div class="w-full overflow-hidden after:clear-both after:block after:content-[''] transition-transform duration-300 ease-in-out">
+                        <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-item>
+                            <div class="aspect-w-16 md:h-96 h-40">
+                                <img src="assets/image/pic2.jpg" class="object-cover object-center w-full h-full" alt="Wild Landscape">
+                            </div>
+                        </div>
+                        <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-item>
+                            <div class="aspect-w-16 md:h-96 h-40">
+                                <img src="assets/image/pic1.jpg" class="object-cover object-center w-full h-full" alt="Wild Landscape">
+                            </div>
+                        </div>
+                        <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-item>
+                            <div class="aspect-w-16 md:h-96 h-40">
+                                <img src="assets/image/pic3.jpg" class="object-cover object-center w-full h-full" alt="Wild Landscape">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="animate__animated animate__fadeInUp md:pt-5 pt-3">  
+                    <p class="md:text-xl  text-lg font-bold text-gray-600 mb-2">Hi, I'm Alexandra</p>
+                    <div class="font-normal lg:text-base text-sm text-zinc-500 text-justify">
+                        <p class="mb-2">I am a passionate designer who loves to create and explore new things. Designing is not just a profession for me, it's a way of life, and I pour my heart and soul into every project I work on. I strongly believe that the key to exceptional design involves not only creativity but also a profound understanding of user needs and behavior. I enjoy immersing myself in the research process and absorbing as much as I can about the target audience, allowing me to craft designs that are not only visually stunning but also exceedingly functional and user-friendly. If you're in search of a designer who is deeply enthusiastic about their craft and who brings a unique perspective and a love for exploration to your project, search no further. I am excited to collaborate with you and create something truly exceptional together</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-gray-100 w-full border-b pt-3"></div>
+    <div class="flex flex-col max-w-screen-xl mx-auto py-8">
+        <p class="reveal fade-bottom lg:text-xl md:text-lg font-bold text-gray-600 mb-2 text-center" >EDUCATIONAL BACKGROUND</p>
+        <div class="flex md:flex-row flex-col max-w-screen-xl mx-auto p-4 gap-4">
+            <div class="reveal fade-bottom flex-1 w-full bg-white border border-gray-200 rounded-lg shadow">
+                <div class="w-full">
+                    <img class="rounded-t-lg w-full object-cover md:h-52 h-40" src="assets/image/cvsu.jpg" alt="" />
+                </div>
+                <div class="p-4">
+                    <p class="lg:text-lg text-base font-bold tracking-tight text-gray-600">College</p>
+                    <p class="mb-3 font-normal lg:base-lg text-sm text-gray-500">2019 - 2023</p>
+                    <p class="font-normal lg:text-base text-sm text-gray-500">Fourth-year student at Cavite State University - Tanza Campus, pursuing a Bachelor of Science in Information Technology.</p>
+                </div>
+            </div>
+            <div class="reveal fade-bottom flex-1 w-full bg-white border border-gray-200 rounded-lg shadow">
+                <div>
+                    <img class="rounded-t-lg w-full object-cover md:h-52 h-40" src="assets/image/bcsat.jpg" alt="" />
+                </div>
+                <div class="p-4">
+                    <p class="lg:text-lg text-base font-bold tracking-tight text-gray-600">Junior - Senior High School</p>
+                    <p class="mb-3 font-normal lg:text-lg text-base text-gray-500">2019 - 2023</p>
+                    <p class="font-normal lg:text-base text-sm text-gray-500">I studied at Butuan City School of Arts and Trades (BCSAT) in TVL Strand of Electronics Product Assembly and Servicing.</p>
+                </div>
+            </div>
+            <div class="reveal fade-bottom flex-1 w-full bg-white border border-gray-200 rounded-lg shadow">
+                <div>
+                    <img class="rounded-t-lg w-full object-cover md:h-52 h-40" src="assets/image/jt.jpg" alt="" />
+                </div>
+                <div class="p-4">
+                    <p class="lg:text-lg text-base font-bold tracking-tight text-gray-600">Primary</p>
+                    <p class="mb-3 font-normal lg:text-base text-sm text-gray-500">2019 - 2023</p>
+                    <p class="font-normal lg:text-base text-sm text-gray-500">Jose T. Domingo, Sr. Central Elementary School, Butuan City, Agusan Del Norte.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Alpine.data('toggle', () => ({
+                navbarOpen: false,
+                toggleNavbar() {
+                    this.navbarOpen = !this.navbarOpen;
+                }
+            }));
+        });
+    </script>
+    <script>
+        const carouselItems = document.querySelectorAll('[data-te-carousel-item]');
+        const carouselContainer = document.querySelector('.overflow-hidden');
+        const transitionDuration = 300; // milliseconds
+    
+        let currentSlideIndex = 0;
+        carouselItems[currentSlideIndex].classList.add('block');
+        carouselItems[currentSlideIndex].classList.remove('hidden');
+    
+        function switchToNextSlide() {
+            carouselItems[currentSlideIndex].classList.add('transition-transform', 'duration-' + transitionDuration);
+            carouselItems[currentSlideIndex].classList.remove('block');
+            carouselItems[currentSlideIndex].classList.add('-mr-[100%]');
+            carouselItems[currentSlideIndex].classList.add('hidden');
+    
+            currentSlideIndex = (currentSlideIndex + 1) % carouselItems.length;
+    
+            carouselItems[currentSlideIndex].classList.remove('-mr-[100%]');
+            carouselItems[currentSlideIndex].classList.add('block', 'transition-transform', 'duration-' + transitionDuration);
+            carouselItems[currentSlideIndex].classList.remove('hidden');
+        }
+    
+        setInterval(switchToNextSlide, 2000);
+    </script>
+    <script>
+        function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+                } else {
+                reveals[i].classList.remove("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>

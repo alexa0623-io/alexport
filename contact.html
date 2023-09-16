@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="h-full w-full font-montserrat">
+        <nav class="bg-white border-b border-gray-300 shadow-md w-full fixed top-0 z-50">
+            <div  class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/image/logo3.png" class="md:h-12 h-10">
+                </a>
+                <div class="flex">
+                    <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500 dark:text-gray-900" aria-controls="navbar-sticky" aria-expanded="false">
+                        <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:mt-0 mt-8" id="navbar-sticky">
+                    <ul class="flex flex-col md:p-0 font-medium text-sm rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 md:gap-0 gap-1">                
+                        <li>
+                            <a href="index.html" class="block py-2 md:px-5 px-4 text-zinc-600 hover:bg-gray-500 hover:text-white rounded" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="block py-2 md:px-5 px-4 text-zinc-600 hover:bg-gray-500 hover:text-white rounded">About</a>
+                        </li>
+                        <li>
+                            <a href="service.html" class="block py-2 md:px-5 px-4 text-zinc-600 hover:bg-gray-500 hover:text-white rounded">Services</a>
+                        </li>
+                        
+                        <!-- dropdown -->
+                        <li class="relative" x-data="{ dropdownOpen: false }">
+                            <button href="#" class="flex justify-between items-center w-full px-4 py-2 font-medium text-zinc-600 hover:bg-gray-500 hover:text-white md:gap-3 rounded outline-none focus:outline-none"
+                                @click="dropdownOpen = !dropdownOpen"
+                                :class="{ 'bg-gray-500': dropdownOpen, 'text-white': dropdownOpen }">
+                                <p :class="{ 'text-white': dropdownOpen }">Project</p>
+                                <i class="fa-solid fa-angle-down" :class="{ 'text-white': dropdownOpen }"></i>
+                            </button>
+                            <!-- dropdown menu -->
+                            <div class="right-0 p-2 mt-1 md:mt-2 md:bg-white bg-zinc-100 md:text-gray-600 text-gray-800 rounded md:border-r md:border-b-2 md:border-t border shadow-sm md:shadow-md lg:absolute"
+                                :class="{ 'hidden': !dropdownOpen, 'flex flex-col': dropdownOpen }"
+                                @click.away="dropdownOpen = false">
+                                <ul class="space-y-1 lg:w-48">
+                                    <li>
+                                        <a href="src/figma.html" class="flex p-2 font-medium rounded-md hover:bg-gray-200 hover:text-zinc-700">Figma</a>
+                                    </li>
+                                    <li>
+                                        <a href="src/canva.html"class="flex p-2 font-medium rounded-md hover:bg-gray-200 hover:text-zinc-700">Canva</a>
+                                    </li>
+                                    <li>
+                                        <a href="src/wix.html" class="flex p-2 font-medium rounded-md  hover:bg-gray-200 hover:text-zinc-700">Wix</a>
+                                    </li>
+                                    <li>
+                                        <a href="src/website.html" class="flex p-2 font-medium rounded-md  hover:bg-gray-200 hover:text-zinc-700">Website</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="block py-2 md:px-5 px-4 rounded text-white bg-gray-500">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="md:mt-32 mt-28 flex max-w-screen-xl mx-auto p-4">
+            <div class="animate__animated animate__fadeInUp w-full flex flex-col justify-center">
+                <p class="text-gray-500 text-center text-xl font-bold mb-2">GET IN TOUCH</p>
+                <!-- <hr class="w-36 h-1 mx-auto  bg-gray-200 border-0 rounded"> -->
+                <hr class="w-20 h-px mx-auto bg-gray-300 border-0">
+                
+                <div class="text-center text-gray-600 text-base mt-8">
+                    <p>Thank you for visiting my portfolio. If you have any work inquiries or feedback, please feel free to contact me through the following channels. I'm here to assist you via email, phone, or social media. Your input is valuable to me, and I look forward to connecting with you.</p>
+                </div>
+            </div>
+        </div>
+        <div class="h-full flex max-w-screen-xl mx-auto p-5">
+            <div class="animate__animated animate__fadeInUp flex flex-col-reverse justify-between md:flex-row w-full  bg-white mb-6">
+                <!-- SOCIAL -->
+                <div class="h-full md:h-auto w-full md:w-96 flex flex-col gap-3 md:bg-white text-gray-600">
+                    <div class="h-40">
+                        <a href="" class="h-full w-full border-2 border-gray-200 flex flex-col justify-center content-center text-center gap-1 md:gap-2 p-16 md:p-0 bg-white">
+                            <div class="w-full flex justify-center">
+                                <div class="h-14 w-14 rounded-full items-center flex justify-center border border-gray-600">
+                                    <i class="fa-solid fa-phone text-base"></i>
+                                </div>
+                            </div>
+                            <div class="w-full font-montserrat text-center text-sm md:text-base">
+                                <p>Call us directly at</p>
+                                <p>09361532369</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="h-40">
+                        <a href="https://www.facebook.com/xandra.walidje/" class="h-full w-full border-2 border-gray-200 flex flex-col justify-center content-center text-center gap-1 md:gap-2 p-16 md:p-0 bg-white">
+                            <div class="w-full flex justify-center">
+                                <div class="h-14 w-14 rounded-full items-center flex justify-center border border-gray-600">
+                                    <i class="fa-brands fa-facebook-f text-lg"></i>
+                                </div>
+                            </div>
+                            <div class="w-full font-montserrat text-center ">
+                                <p class="text-sm md:text-base ">Facebook</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="h-40">
+                        <a href="" class="h-full w-full border-2 border-gray-200 flex flex-col justify-center content-center text-center gap-1 md:gap-2 p-16 md:p-0 bg-white">
+                            <div class="w-full flex justify-center">
+                                <div class="h-14 w-14 rounded-full items-center flex justify-center border border-gray-600">
+                                    <i class="fa-brands fa-instagram text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="w-full font-montserrat text-center text-sm md:text-base">
+                                <p>Instagram</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- FORM -->
+                <div class="-mt-2 md:mt-0 h-auto w-full md:w-4/6 border-2 flex content-center justify-center bg-white">
+                    <div class="w-4/5">
+                        <div class="text-center w-w-1/2 md:w-full px-4 md:px-0 mb-7">
+                            <h1 class="text-gray-500 md:mt-11 mt-8 md:mb-2 text-lg font-montserrat font-semibold ">Email Contact</h1>
+                            <span class="font-montserrat text-sm md:text-base text-justify text-gray-600">Please feel free to contact me via email with any questions or inquiries.</span>
+                        </div>
+
+                        <form action="https://formsubmit.co/walidjexandra@gmail.com" method="POST">
+                            <div class="w-full flex flex-col mb-2 md:mb-4">
+                                <input type="text" class="form-control border-gray-400 p-2 py-3 text-sm" name="name"  placeholder="Full Name">
+                            </div>
+                            <div class="w-full flex flex-col mb-2 md:mb-4">
+                                <input type="email" class="form-control border-gray-400 p-2 py-3 text-sm" name="Email"  placeholder="Email address">
+                            </div>
+                            
+                            <div class="w-full flex flex-col mb-2 md:mb-0 text-gray-500">
+                                <textarea class="border-gray-400 text-sm p-2" name="Message" rows="6" placeholder="Message"></textarea>
+                            </div>
+                            <div class="flex justify-center my-5">
+                                <button type="submit" class="btn btn-secondary py-2 w-full bg-gray-500 hover:bg-gray-600 text-white">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Alpine.data('toggle', () => ({
+                navbarOpen: false,
+                toggleNavbar() {
+                    this.navbarOpen = !this.navbarOpen;
+                }
+            }));
+        });
+    </script>
+</body>
+</html>

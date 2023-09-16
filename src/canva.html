@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+<body>
+    <div class="h-full w-full">
+        <nav class="bg-white border-b border-gray-300 shadow-md w-full fixed top-0 z-10">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="/index.html" class="flex items-center">
+                    <img src="/assets/image/logo3.png" class="md:h-12 h-10">
+                </a>
+                <div class="flex">
+                    <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500 dark:text-gray-900" aria-controls="navbar-sticky" aria-expanded="false">
+                        <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:mt-0 mt-8" id="navbar-sticky">
+                    <ul class="flex flex-col md:p-0 font-medium text-sm rounded-lg md:flex-row md:space-x-2 md:mt-0 md:border-0 md:gap-0 gap-1">                
+                        <li>
+                            <a href="/index.html" class="block py-2 md:px-5 px-4 text-zinc-600 hover:bg-gray-500 hover:text-white rounded" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="/about.html" class="block py-2 md:px-5 px-4 text-zinc-600 hover:bg-gray-500 hover:text-white rounded">About</a>
+                        </li>
+                        <li>
+                            <a href="/service.html" class="block py-2 md:px-5 px-4 text-zinc-600 hover:bg-gray-500 hover:text-white rounded">Services</a>
+                        </li>
+                        
+                        <!-- dropdown -->
+                        <li class="relative rounded bg-gray-500" x-data="{ dropdownOpen: false }">
+                            <button href="#" class="flex justify-between items-center w-full px-4 py-2 font-medium text-white md:gap-3 rounded outline-none focus:outline-none"
+                                @click="dropdownOpen = !dropdownOpen">
+                                <p>Project</p>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </button>
+                            <!-- dropdown menu -->
+                            <div class="right-0 p-2 mt-1 md:mt-2 md:bg-white bg-zinc-100 md:text-gray-600 text-gray-800 rounded md:border-r md:border-b-2 md:border-t border shadow-sm md:shadow-md lg:absolute"
+                                :class="{ 'hidden': !dropdownOpen, 'flex flex-col': dropdownOpen }"
+                                @click.away="dropdownOpen = false">
+                                <ul class="space-y-1 lg:w-48">
+                                    <li>
+                                        <a href="figma.html" class="flex p-2 font-medium rounded-md hover:bg-gray-200 hover:text-zinc-600 ">Figma</a>
+                                    </li>
+                                    <li>
+                                        <a href="canva.html"class="flex p-2 font-medium rounded-md bg-gray-200 text-zinc-600">Canva</a>
+                                    </li>
+                                    <li>
+                                        <a href="wix.html" class="flex p-2 font-medium rounded-md  hover:bg-gray-200 hover:text-zinc-600">Wix</a>
+                                    </li>
+                                    <li>
+                                        <a href="website.html" class="flex p-2 font-medium rounded-md  hover:bg-gray-200 hover:text-zinc-600">Website</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/contact.html" class="block py-2 md:px-5 px-4 rounded text-zinc-600 hover:bg-gray-500 hover:text-white">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="mt-20 bg-fixed md:block hidden justify-center h-96 w-full items-center bg-no-repeat" style="background-image: url(/assets/image/d4.png); background-position: center;"></div>
+
+        <div class="md:mt-20 mt-16 md:hidden block justify-center md:h-screen h-56 w-full items-center" style="background-image: url(/assets/image/d1.png); background-position: center;">
+            <p class="bts flex md:h-96 h-full md:items-end items-center justify-center md:text-9xl text-6xl text-neutral-400">CANVA</p>
+        </div>
+        
+
+        <div x-data="{ activeSection: 'social-media' }" class="md:my-10 mt-5 flex flex-col max-w-screen-xl mx-auto p-4">
+            <div class="font1 animate__animated animate__fadeInUp md:text-base text-sm font-medium flex md:justify-center md:gap-4 gap-2 text-gray-400">
+            <!-- <div class="bg-red-200 font1 md:text-base text-sm flex md:justify-center"> -->
+                <button @click="activeSection = 'social-media'" :class="{ 'text-white': activeSection === 'social-media', 'bg-gray-500': activeSection === 'social-media'}" class="md:w-48 w-44 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Social Media</button>
+                <button @click="activeSection = 'certificates'" :class="{ 'text-white': activeSection === 'certificates', 'bg-gray-500': activeSection === 'certificates'}" class="md:w-48 w-28 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Certificates</button>
+
+                
+                <button @click="activeSection = 'tarpaulin'" :class="{ 'text-white': activeSection === 'tarpaulin', 'bg-gray-500': activeSection === 'tarpaulin'}" class="md:w-48 w-28 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Tarpaulin</button>
+
+            </div>            
+            <!-- Social Media -->
+            <div x-show="activeSection === 'social-media'" class="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-3 gap-4 mt-9">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/q4.png" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/q2.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/q5.png">
+                </div>
+                <div class="animate__animated animate_fadeInUp">
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/q6.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/q1.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/q3.png">
+                </div>
+            </div>
+
+            <!-- Certificates -->
+            <div x-show="activeSection === 'certificates'" class="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-3 gap-4 mt-9">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/c6.png" alt="">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/c3.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/c1.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/c7.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/c2.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/c4.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/cl1.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/cl2.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/cl3.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/cl4.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/cl5.png">
+                </div>
+            </div>   
+            <div x-show="activeSection === 'tarpaulin'" class="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-3 gap-4 mt-9">
+                <!-- <div class="flex flex-col items-center justify-center text-4xl">
+                    <p class="bts tracking-widest text-zinc-400 italic ">Social Media</p>
+                    <p class="bts tracking-widest  text-zinc-400 font-bold italic ">Design</p>
+                </div> -->
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/t1.png" alt="">
+                </div>
+                <div>
+                    <img class="h-full max-w-full rounded-lg" src="/assets/image/t4.png">
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="/assets/image/t3.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Alpine.data('toggle', () => ({
+                navbarOpen: false,
+                toggleNavbar() {
+                    this.navbarOpen = !this.navbarOpen;
+                }
+            }));
+        });
+    </script>
+    
+</body>
+</html>
