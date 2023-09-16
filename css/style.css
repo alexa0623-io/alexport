@@ -47,12 +47,12 @@
 }
 
 
-.background-image{
+/* .background-image{
     background-image: url(assets/image/pic3.jpg);
     background-size: cover; 
     background-attachment: fixed;
     background-repeat: no-repeat;
-}
+} */
 
 .nav a:hover{
     color: rgb(192, 140, 140);
