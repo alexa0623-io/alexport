@@ -71,15 +71,20 @@
                 </div>
             </div>
         </nav>
-        <div class="mt-20 bg-fixed md:block hidden justify-center h-96 w-full items-center bg-no-repeat" style="background-image: url(assets/image/d4.png); background-position: center;"></div>
 
-        <div class="md:mt-20 mt-16 md:hidden block justify-center md:h-screen h-56 w-full items-center" style="background-image: url(assets/image/d1.png); background-position: center;">
-            <p class="bts flex md:h-96 h-full md:items-end items-center justify-center md:text-9xl text-6xl text-neutral-400">CANVA</p>
+        <div class="mt-20 bg-fixed lg:block hidden justify-center xl:h-96 lg:h-80 w-full items-center bg-no-repeat" style="background-image: url(assets/image/d4.png); background-position: center;"></div>
+        
+        <div class="md:mt-20 mt-16  bg-fixed lg:hidden block justify-center md:h-64 h-56 w-full items-center bg-no-repeat" style="background-image: url(assets/image/d1.png); background-position: center;">
+            <p class="bts flex  h-full items-center justify-center md:text-9xl sm:text-8xl text-6xl text-neutral-400">CANVA</p>
         </div>
+
+        <!-- <div class="md:mt-20 mt-16 lg:hidden block justify-center md:h-screen h-56 w-full items-center" style="background-image: url(assets/image/d1.png); background-position: center;">
+            <p class="bts flex md:h-96 h-full md:items-end items-center justify-center md:text-9xl text-6xl text-neutral-400">CANVA</p>
+        </div> -->
         
 
         <div x-data="{ activeSection: 'social-media' }" class="md:my-10 mt-5 flex flex-col max-w-screen-xl mx-auto p-4">
-            <div class="font1 animate__animated animate__fadeInUp md:text-base text-sm font-medium flex md:justify-center md:gap-4 gap-2 text-gray-400">
+            <div class="font1 animate__animated animate__fadeInUp md:text-base text-sm font-medium flex justify-center md:gap-4 gap-2 text-gray-400">
             <!-- <div class="bg-red-200 font1 md:text-base text-sm flex md:justify-center"> -->
                 <button @click="activeSection = 'social-media'" :class="{ 'text-white': activeSection === 'social-media', 'bg-gray-500': activeSection === 'social-media'}" class="md:w-48 w-44 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Social Media</button>
                 <button @click="activeSection = 'certificates'" :class="{ 'text-white': activeSection === 'certificates', 'bg-gray-500': activeSection === 'certificates'}" class="md:w-48 w-28 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Certificates</button>

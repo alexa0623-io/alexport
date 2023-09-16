@@ -11,6 +11,25 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url(Alta_regular.otf);
+        }
+
+        .bts{
+            font-family: myFont;
+        }
+
+        @font-face {
+            font-family: myFont1;
+            src: url(Ardeco.ttf);
+        }
+
+        .font1{
+            font-family: myFont1;
+        }
+    </style>
 </head>
 <body>
     <div class="h-full w-full">
@@ -70,15 +89,20 @@
                 </div>
             </div>
         </nav>
-        <div class="mt-20 bg-fixed md:block hidden justify-center h-96 w-full items-center bg-no-repeat" style="background-image: url(assets/image/d3.png); background-position: center;"></div>
+        <!-- <div class="mt-20 bg-fixed md:block hidden justify-center h-96 w-full items-center bg-no-repeat" style="background-image: url(assets/image/d3.png); background-position: center;"></div>
 
         <div class="md:mt-20 mt-16 md:hidden block justify-center md:h-screen h-56 w-full items-center" style="background-image: url(assets/image/d1.png); background-position: center;">
             <p class="bts flex md:h-96 h-full md:items-end items-center justify-center md:text-9xl text-6xl text-neutral-400">FIGMA</p>
-        </div>
+        </div> -->
         
+        <div class="mt-20 bg-fixed lg:block hidden justify-center xl:h-96 lg:h-80 w-full items-center bg-no-repeat" style="background-image: url(assets/image/d3.png); background-position: center;"></div>
+        
+        <div class="md:mt-20 mt-16  bg-fixed lg:hidden block justify-center md:h-64 h-56 w-full items-center bg-no-repeat" style="background-image: url(assets/image/d1.png); background-position: center;">
+            <p class="bts flex  h-full items-center justify-center md:text-9xl sm:text-8xl text-6xl text-neutral-400">FIGMA</p>
+        </div>
 
         <div x-data="{ activeSection: 'website' }" class="md:my-10 mt-5 flex flex-col max-w-screen-xl mx-auto p-4">
-            <div class="font1 text-base font-medium flex md:justify-center  md:gap-2 text-gray-400">
+            <div class="font1 text-base font-medium flex justify-center  md:gap-2 text-gray-400">
                 <button @click="activeSection = 'website'" :class="{ 'text-white': activeSection === 'website', 'bg-gray-500': activeSection === 'website'}" class="w-48 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Website</button>
                 <button @click="activeSection = 'admin'" :class="{ 'text-white': activeSection === 'admin', 'bg-gray-500': activeSection === 'admin'}" class="w-48 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Admin Page</button>
             </div>            
