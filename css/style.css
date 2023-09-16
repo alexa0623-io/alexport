@@ -48,7 +48,7 @@
 
 
 .background-image{
-    background-image: url(pics1.jpg);
+    background-image: url(/assets/image/pics1.jpg);
     background-size: cover; 
     background-attachment: fixed;
     background-repeat: no-repeat;
