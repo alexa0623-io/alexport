@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); 
 
 
+@font-face {
+    font-family: myFont;
+    src: url(/src/Alta_regular.otf);
+}
+
+.bts{
+    font-family: myFont;
+}
+
+@font-face {
+    font-family: myFont1;
+    src: url(/src/Ardeco.ttf);
+}
+
+.font1{
+    font-family: myFont1;
+}
+
 /* @font-face {
     font-family: myFont2;
     src: url(/balgin2.otf);
