@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap'); 
 @font-face {
     font-family: myFont;
-    src: url(/Alta_regular.otf);
+    src: url(Alta_regular.otf);
 }
 
 .bts{
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: myFont1;
-    src: url(/Ardeco.ttf);
+    src: url(Ardeco.ttf);
 }
 
 .font1{
