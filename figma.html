@@ -101,18 +101,101 @@
             <p class="bts flex  h-full items-center justify-center md:text-9xl sm:text-8xl text-6xl text-neutral-400">FIGMA</p>
         </div>
 
-        <div x-data="{ activeSection: 'website' }" class="md:my-10 mt-5 flex flex-col max-w-screen-xl mx-auto p-4">
+        <div x-data="{ activeSection: 'pharmacy' }" class="md:my-10 mt-5 flex flex-col max-w-screen-xl mx-auto p-4">
+            <div class="font1 text-base font-medium flex justify-center  md:gap-2 text-gray-400">
+                <button @click="activeSection = 'pharmacy'" :class="{ 'text-white': activeSection === 'pharmacy', 'bg-gray-500': activeSection === 'pharmacy'}" class="w-48 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">PMC Website</button>
+                <button @click="activeSection = 'brgy'" :class="{ 'text-white': activeSection === 'brgy', 'bg-gray-500': activeSection === 'brgy'}" class="w-48 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">PMC Admin</button>
+            </div>                                    
+
+
+            <!-- Pharmacy -->
+            <div x-show="activeSection === 'pharmacy'" class="animate__animated animate__fadeInUp">
+                <div class="flex max-w-screen-xl mx-auto md:mt-12 mt-0">
+                    <div class="text-center text-gray-500 md:text-base text-sm w-full  m-7 md:mt-0">
+                        <p>Explore the Mock Design. Click the link: <a href="https://www.figma.com/proto/sGTjEMqyD4LVjQBFJ0DKoi/PMC-Mock-Design?type=design&node-id=1-2&t=sHWsRerzTs0si9ad-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2" class="text-blue-400 hover:text-blue-500">https://www.figma.com/proto</a></p>
+                    </div>
+                </div>
+        
+                <div class="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-2 gap-4 mt-1">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/wf1.png" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/wf2.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/wf3.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/wf4.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/wf5.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/wf6.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/wf7.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/wf8.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/wf9.png">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barangay -->
+            <div x-show="activeSection === 'brgy'" class="animate__animated animate__fadeInUp">
+                <div x-show="activeSection === 'brgy'" class="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af1.png" alt="">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af2.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af3.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af4.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af5.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af6.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af7.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af8.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af9.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af10.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af11.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/af12.png">
+                    </div>
+                </div>   
+            </div>            
+        </div>
+
+        <!-- <div x-data="{ activeSection: 'website' }" class="md:my-10 mt-5 flex flex-col max-w-screen-xl mx-auto p-4">
             <div class="font1 text-base font-medium flex justify-center  md:gap-2 text-gray-400">
                 <button @click="activeSection = 'website'" :class="{ 'text-white': activeSection === 'website', 'bg-gray-500': activeSection === 'website'}" class="w-48 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Website</button>
                 <button @click="activeSection = 'admin'" :class="{ 'text-white': activeSection === 'admin', 'bg-gray-500': activeSection === 'admin'}" class="w-48 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Admin Page</button>
-            </div>            
-            <!-- Website -->
-            
+            </div>      
 
-            <!-- Certificates -->
-            <div>
-                
-            </div>
             <div x-show="activeSection === 'admin'" class="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-2 gap-4 mt-9">
                 <div>
                     <img class="h-auto max-w-full rounded-lg" src="assets/image/af1.png" alt="">
@@ -154,8 +237,6 @@
             <div>
                 <div class="animate__animated animate__fadeInUp flex max-w-screen-xl mx-auto md:mt-12 mt-10">
                     <div class="text-center text-gray-500 md:text-base text-sm w-full">
-                        <!-- <p class="md:font-bold font-semibold">Explore the Mock Design. Click the link below!</p>
-                        <a href="https://www.figma.com/proto/sGTjEMqyD4LVjQBFJ0DKoi/PMC-Mock-Design?type=design&node-id=1-2&t=sHWsRerzTs0si9ad-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2" class=" hover:text-blue-700">https://www.figma.com/proto</a> -->
                         <p>Explore the Mock Design. Click the link: <a href="https://www.figma.com/proto/sGTjEMqyD4LVjQBFJ0DKoi/PMC-Mock-Design?type=design&node-id=1-2&t=sHWsRerzTs0si9ad-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2" class="text-blue-400 hover:text-blue-500">https://www.figma.com/proto</a></p>
                     </div>
                 </div>
@@ -189,7 +270,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>

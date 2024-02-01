@@ -86,44 +86,99 @@
             <p class="bts flex  h-full items-center justify-center md:text-9xl sm:text-8xl text-6xl text-neutral-400">WEBSITES</p>
         </div>
 
-        <div class="md:my-10 mt-5 flex flex-col max-w-screen-xl mx-auto p-4">
-            <div class="animate__animated animate__fadeInUp flex max-w-screen-xl mx-auto md:-mt-4">
-                <div class="text-center text-gray-500 md:text-base text-sm">
-                    <p> Capstone project, entitled "Development of a Pharmacy Management System for Goodness Care Pharmacy," is designed as an offline website."</p>
+        <div x-data="{ activeSection: 'pharmacy' }" class="md:my-10 mt-5 flex flex-col max-w-screen-xl mx-auto p-4">
+            <div class="font1 text-base font-medium flex justify-center  md:gap-2 text-gray-400">
+                <button @click="activeSection = 'pharmacy'" :class="{ 'text-white': activeSection === 'pharmacy', 'bg-gray-500': activeSection === 'pharmacy'}" class="w-48 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Pharmacy</button>
+                <button @click="activeSection = 'brgy'" :class="{ 'text-white': activeSection === 'brgy', 'bg-gray-500': activeSection === 'brgy'}" class="w-48 justify-center text-gray-600 hover:text-white hover:bg-gray-500 rounded-md tracking-widest p-2 px-5 flex items-center">Barangay</button>
+            </div>                                    
+
+
+            <!-- Pharmacy -->
+            <div x-show="activeSection === 'pharmacy'" class="animate__animated animate__fadeInUp">
+                <div class="flex max-w-screen-xl mx-auto md:mt-12 mt-0">
+                    <div class="text-center text-gray-500 md:text-base text-sm w-full m-7 md:mt-0">
+                        <p class="mt-0">Development of a Pharmacy Management System for Goodness Care Pharmacy," is designed as an offline website.</p>
+                    </div>
+                </div>
+        
+                <div class="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-2 gap-4 mt-1">
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/web1.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/web2.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/web3.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/web4.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/web5.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/web6.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/web7.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/web8.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/web9.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/web10.png">
+                    </div>
                 </div>
             </div>
-            <div x-show="activeSection === 'social-media'" class="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-2 gap-4 mt-9">
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="assets/image/web1.png" alt="">
+
+            <!-- Barangay -->
+            <div x-show="activeSection === 'brgy'" class="animate__animated animate__fadeInUp">
+                <div class="flex max-w-screen-xl mx-auto md:mt-12 mt-0">
+                    <div class="text-center text-gray-500 md:text-base text-sm w-full mt-7 md:mt-0">
+                        <p class="mt-0">Development of a Barangay Information System for Brgy. Mahabang Kahoy Lejos, Indang Cavite ," is also designed as an offline website.</p>
+                    </div>
                 </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="assets/image/web2.png">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="assets/image/web3.png">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="assets/image/web4.png">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="assets/image/web5.png">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="assets/image/web6.png">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="assets/image/web7.png">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="assets/image/web8.png">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="assets/image/web9.png">
-                </div>
-                <div>
-                    <img class="h-auto max-w-full rounded-lg" src="assets/image/web10.png">
-                </div>
-            </div>
+                <div x-show="activeSection === 'brgy'" class="animate__animated animate__fadeInUp grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+        
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b1.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b2.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b3.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b4.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b5.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b6.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b7.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b8.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b9.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b10.png">
+                    </div>
+                    <div>
+                        <img class="h-auto max-w-full rounded-lg" src="assets/image/b11.png">
+                    </div>
+                </div>   
+            </div>            
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
